@@ -5,14 +5,14 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',  // Allow frontend to connect
+    origin: 'https://blogapp-wheat-nine.vercel.app/',  // Allow frontend to connect
     credentials: true
 }));
 
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/Main_Blog', {
+mongoose.connect('mongodb+srv://rithika:rithikaspt098@@blog.vjny88k.mongodb.net/Main_Blog', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB'))
